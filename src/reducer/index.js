@@ -9,7 +9,6 @@ export default (state = initialState, { type, payload }) => {
     return {todos: [...state.todos, payload]}
     }
   case "UPDATE":{
-    console.log(state.todos)
     var result = state.todos.map(todo => {
       if (todo.id === payload.id)
         return payload
@@ -17,6 +16,9 @@ export default (state = initialState, { type, payload }) => {
         return todo
     })
     return {todos:result}
+  }
+  case "INIT":{
+    return {todos: payload}
   }
   default:
     return state

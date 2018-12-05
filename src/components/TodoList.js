@@ -5,6 +5,7 @@ import TodoInputContainer from '../container/TodoInputContainer.js';
 export default class TodoList extends Component {
   
   render() {
+    const {dummy} = this.props.getInitData
     return (
       <div>
         <TodoInputContainer/>
