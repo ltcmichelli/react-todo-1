@@ -1,12 +1,13 @@
 const initialState = {
-    todos: []
+    todos: [],
+    checked: false
 }
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
 
   case "ADDNEWTODO":{
-    return {todos: [...state.todos, payload]}
+    return {...state, todos: [...state.todos, payload]}
     }
   case "UPDATE":{
     var result = state.todos.map(todo => {
@@ -15,10 +16,14 @@ export default (state = initialState, { type, payload }) => {
       else
         return todo
     })
-    return {todos:result}
+    return {...state, todos:result}
   }
   case "INIT":{
-    return {todos: payload}
+    return {...state, todos: payload}
+  }
+  case "CHECKBOX":{
+    console.log(state.checked)
+    return {...state, checked: !state.checked}
   }
   default:
     return state

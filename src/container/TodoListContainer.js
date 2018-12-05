@@ -15,7 +15,12 @@ const mapDispatchToProps = (dispatch) =>({
       type: "INIT",
       payload: res._embedded.todos
     })
-  })
+  }),
+  handleInputChange:
+    dispatch({
+      type: "CHECKBOX",
+      payload: ''
+    })
 })
 
 export default connect(mapStateToProps,mapDispatchToProps)(TodoList);

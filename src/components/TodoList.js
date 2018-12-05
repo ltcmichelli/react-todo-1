@@ -10,6 +10,12 @@ export default class TodoList extends Component {
       <div>
         <TodoInputContainer/>
         <TodosContainer/>
+        <input
+            name="isGoing"
+            type="checkbox"
+            checked={this.props.checked}
+            onChange={() => this.props.handleInputChange} />
+        Show completed
       </div>
     )
   } 
