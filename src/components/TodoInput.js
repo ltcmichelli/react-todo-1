@@ -1,17 +1,22 @@
 import React, { Component } from 'react'
-
 export default class TodoInput extends Component {
-  dispatch = () => {
+
+  onAdded = () => {
     const {input} = this.refs
-    this.props.onNewTodoAdded(input.value)
+    console.log("Props");
+    console.log(this.props);
+    this.props.addNewTodo(input.value)
     input.value = ''
   }
+  
+
   render() {
     return (
       <div>
         <input ref="input"/>
-        <button onClick={this.dispatch}>add</button>
+        <button onClick={this.onAdded}>add</button>
       </div>
     )
   }
 }
+
