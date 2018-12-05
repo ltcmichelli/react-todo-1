@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import TodoInput from '../container/TodoInputContainer.js'
-import Todos from './Todos'
+import TodosContainer from '../container/TodosContainer'
+import TodoInputContainer from '../container/TodoInputContainer.js';
 
 export default class TodoList extends Component {
   
   render() {
     return (
       <div>
-        <TodoInput/>
-        <Todos/>
+        <TodoInputContainer/>
+        <TodosContainer/>
       </div>
     )
   } 

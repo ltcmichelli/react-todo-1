@@ -3,8 +3,6 @@ export default class TodoInput extends Component {
 
   onAdded = () => {
     const {input} = this.refs
-    console.log("Props");
-    console.log(this.props);
     this.props.addNewTodo(input.value)
     input.value = ''
   }
