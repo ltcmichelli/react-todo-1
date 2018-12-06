@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TodosContainer from '../container/TodosContainer'
 import TodoInputContainer from '../container/TodoInputContainer.js';
+import CheckboxContainer from '../container/CheckboxContainer.js';
 
 export default class TodoList extends Component {
   
@@ -10,12 +11,7 @@ export default class TodoList extends Component {
       <div>
         <TodoInputContainer/>
         <TodosContainer/>
-        <input
-            name="isGoing"
-            type="checkbox"
-            checked={this.props.checked}
-            onChange={() => this.props.handleInputChange} />
-        Show completed
+        <CheckboxContainer/>
       </div>
     )
   } 

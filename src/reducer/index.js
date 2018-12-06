@@ -22,8 +22,8 @@ export default (state = initialState, { type, payload }) => {
     return {...state, todos: payload}
   }
   case "CHECKBOX":{
-    console.log(state.checked)
-    return {...state, checked: !state.checked}
+    const check = state.checked ? false : true
+    return {...state, checked: check}
   }
   default:
     return state
